@@ -24,4 +24,4 @@ router.get("/query", (req, res) => {
   res.json(describeQuery({ measure, dimension, time, filters }));
 });
 
-module.exports = router;
+module.exports = router
