@@ -16,6 +16,13 @@ router.get("/overview", (req, res) => {
   });
 });
 
+router.get("/kpis", (req, res) => res.json(data.kpis));
+router.get("/revenue-trend", (req, res) => res.json(data.revenueTrend));
+router.get("/revenue-by-region", (req, res) => res.json(data.revenueByRegion));
+router.get("/cost-breakdown", (req, res) => res.json(data.costBreakdown));
+router.get("/quarterly-performance", (req, res) => res.json(data.quarterlyPerformance));
+router.get("/top-products", (req, res) => res.json(data.topProducts));
+router.get("/insights", (req, res) => res.json(data.insights));
 
 // GET /api/metrics/query?measure=revenue&dimension=region&time=Q3%202025
 // Exposes the semantic layer directly, e.g. for "Explore Metrics".
@@ -24,4 +31,4 @@ router.get("/query", (req, res) => {
   res.json(describeQuery({ measure, dimension, time, filters }));
 });
 
-module.exports = router
+module.exports = router;
