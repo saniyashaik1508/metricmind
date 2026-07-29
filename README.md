@@ -142,3 +142,30 @@ MIT License
 GitHub
 
 https://github.com/saniyashaik1508
+## Project Setup
+
+### Frontend
+
+Install dependencies:
+
+npm install
+
+Start the application:
+
+npm run dev
+
+### Backend
+
+Start the Express backend:
+
+node backend/server.js
+
+### dbt
+
+Navigate to the dbt project:
+
+cd dbt_project
+
+Run the analytical models:
+
+dbt build
