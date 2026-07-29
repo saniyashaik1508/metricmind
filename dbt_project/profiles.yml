@@ -1,0 +1,10 @@
+# Example dbt profile for MetricMind using DuckDB.
+# Copy this file to ~/.dbt/profiles.yml (or set DBT_PROFILES_DIR) to run
+# `dbt seed` / `dbt run` locally against the bundled DuckDB database.
+metricmind:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../backend/data/metricmind.duckdb'
+      threads: 4
