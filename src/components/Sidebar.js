@@ -73,4 +73,12 @@ export default function Sidebar() {
           <div className="w-9 h-9 rounded-full bg-brand-500 flex items-center justify-center text-sm font-semibold text-white">
             SA
           </div>
-
+          <div className="text-sm">
+            <p className="font-medium text-white leading-tight">Saniya Shaik</p>
+            <p className="text-xs text-slate-400 leading-tight">Data Analyst</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
+}
