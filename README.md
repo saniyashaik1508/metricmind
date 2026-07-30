@@ -142,30 +142,20 @@ MIT License
 GitHub
 
 https://github.com/saniyashaik1508
-## Project Setup
+## API Workflow
 
-### Frontend
+MetricMind uses an Express backend to provide financial metrics and AI assistant functionality.
 
-Install dependencies:
+### Metrics
 
-npm install
+- `/api/metrics/overview` — dashboard overview metrics
+- `/api/metrics/revenue` — revenue data
+- `/api/metrics/cost` — cost information
+- `/api/metrics/margin` — margin information
+- `/api/metrics/query` — metric query processing
 
-Start the application:
+### AI Assistant
 
-npm run dev
+- `/api/assistant/ask` — processes natural-language financial questions
 
-### Backend
-
-Start the Express backend:
-
-node backend/server.js
-
-### dbt
-
-Navigate to the dbt project:
-
-cd dbt_project
-
-Run the analytical models:
-
-dbt build
+The frontend communicates with these endpoints through the API utility layer.
