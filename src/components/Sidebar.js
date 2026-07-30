@@ -44,7 +44,11 @@ export default function Sidebar() {
               : "text-slate-300 hover:bg-slate-800 hover:text-white"
               }`}
           >
-            
+            <Icon className="w-4 h-4" />
+            {label}
+          </button>
+        ))}
+      </nav>
 
       <div className="px-4 py-4 border-t border-slate-800 space-y-4">
         <div className="flex items-center justify-between px-2">
