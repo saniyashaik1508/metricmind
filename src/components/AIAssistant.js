@@ -311,7 +311,3 @@ export default function AIAssistant({ onQuickQuestion }) {
         <p className="flex items-center gap-1 text-[11px] text-slate-400 mt-2">
           <ShieldCheck className="w-3 h-3" /> AI responses are based on governed business metrics.
         </p>
-      </form>
-    </aside>
-  );
-}
