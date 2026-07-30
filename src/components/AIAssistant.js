@@ -293,3 +293,25 @@ export default function AIAssistant({ onQuickQuestion }) {
         }}
         className="px-5 py-4 border-t border-slate-100"
       >
+        <div className="flex items-center gap-2">
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Ask a business question..."
+            className="flex-1 text-sm border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-200"
+          />
+          <button
+            type="submit"
+            className="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center hover:bg-brand-700 shrink-0"
+            aria-label="Send"
+          >
+            <Send className="w-4 h-4" />
+          </button>
+        </div>
+        <p className="flex items-center gap-1 text-[11px] text-slate-400 mt-2">
+          <ShieldCheck className="w-3 h-3" /> AI responses are based on governed business metrics.
+        </p>
+      </form>
+    </aside>
+  );
+}
