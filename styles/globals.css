@@ -26,3 +26,4 @@ body {
 
 .dark ::-webkit-scrollbar-thumb {
   @apply bg-slate-700;
+}
