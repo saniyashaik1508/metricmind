@@ -142,20 +142,3 @@ MIT License
 GitHub
 
 https://github.com/saniyashaik1508
-## API Workflow
-
-MetricMind uses an Express backend to provide financial metrics and AI assistant functionality.
-
-### Metrics
-
-- `/api/metrics/overview` — dashboard overview metrics
-- `/api/metrics/revenue` — revenue data
-- `/api/metrics/cost` — cost information
-- `/api/metrics/margin` — margin information
-- `/api/metrics/query` — metric query processing
-
-### AI Assistant
-
-- `/api/assistant/ask` — processes natural-language financial questions
-
-The frontend communicates with these endpoints through the API utility layer.
