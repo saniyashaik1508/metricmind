@@ -20,4 +20,9 @@ body {
   height: 8px;
 }
 
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
 
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-700;
