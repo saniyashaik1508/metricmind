@@ -11,7 +11,7 @@ export default function TopBar() {
         </div>
         <div>
           <h1 className="text-xl font-bold text-slate-900">MetricMind</h1>
-          <p className="text-sm text-slate-500">Here&apos;s your overview of business performance</p>
+
         </div>
       </div>
 
