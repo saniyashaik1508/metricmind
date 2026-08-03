@@ -14,14 +14,11 @@ import {
 import { useState } from "react";
 
 const navItems = [
-  { label: "Dashboard", icon: BarChart3, active: true },
-  { label: "Ask MetricMind", icon: MessageSquare },
-  { label: "Explore Metrics", icon: Compass },
-  { label: "Semantic Layer", icon: Layers },
-  { label: "Reports", icon: FileText },
-  { label: "Data Sources", icon: Database },
-  { label: "Governance", icon: ShieldCheck },
-  { label: "Settings", icon: Settings },
+  { label: "overview", icon: BarChart3, active: true },
+  { label: "Analytics", icon: MessageSquare },
+  { label: "Revenue", icon: Layers },
+  { label: "Regions", icon: FileText },
+  { label: "Products", icon: Settings },
 ];
 
 export default function Sidebar() {
@@ -41,11 +38,10 @@ export default function Sidebar() {
         {navItems.map(({ label, icon: Icon, active }) => (
           <button
             key={label}
-            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-              active
-                ? "bg-brand-600 text-white"
-                : "text-slate-300 hover:bg-slate-800 hover:text-white"
-            }`}
+            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${active
+              ? "bg-brand-600 text-white"
+              : "text-slate-300 hover:bg-slate-800 hover:text-white"
+              }`}
           >
             <Icon className="w-4 h-4" />
             {label}
@@ -61,15 +57,13 @@ export default function Sidebar() {
           </div>
           <button
             onClick={() => setDarkMode((v) => !v)}
-            className={`w-10 h-5 rounded-full transition-colors relative ${
-              darkMode ? "bg-brand-600" : "bg-slate-700"
-            }`}
+            className={`w-10 h-5 rounded-full transition-colors relative ${darkMode ? "bg-brand-600" : "bg-slate-700"
+              }`}
             aria-label="Toggle dark mode"
           >
             <span
-              className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-transform ${
-                darkMode ? "translate-x-5" : "translate-x-0.5"
-              }`}
+              className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-transform ${darkMode ? "translate-x-5" : "translate-x-0.5"
+                }`}
             />
           </button>
         </div>
