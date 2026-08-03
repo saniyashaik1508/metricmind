@@ -141,7 +141,7 @@ export default function AIAssistant({ onQuickQuestion }) {
             <Bot className="w-5 h-5 text-white" />
           </div>
           <div>
-            <p className="text-sm font-semibold text-slate-900">MetricMind AI Assistant</p>
+            <p className="text-sm font-semibold text-slate-900">Semantic Query Assistant</p>
             <p className="text-xs text-emerald-600 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Online
             </p>
