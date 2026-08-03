@@ -17,8 +17,9 @@ const navItems = [
   { label: "overview", icon: BarChart3, active: true },
   { label: "Analytics", icon: MessageSquare },
   { label: "Revenue", icon: Layers },
-  { label: "Regions", icon: FileText },
-  { label: "Products", icon: Settings },
+  { label: "Regions", icon: Compass },
+  { label: "Products", icon: MessageSquare },
+  { label: "settings", icon: Settings },
 ];
 
 export default function Sidebar() {
