@@ -3,16 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Bot, Send, X, BarChart2, ShieldCheck, ChevronDown, ChevronUp } from "lucide-react";
 import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Cell,
+
 } from "recharts";
 import { askAssistant } from "@/lib/api";
 import { fallbackOverview } from "@/lib/mockData";
