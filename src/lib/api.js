@@ -13,6 +13,65 @@ export async function getOverview() {
     return fallbackOverview;
   }
 }
+export async function getRevenueTrend() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/metrics/revenue-trend`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Bad response");
+    return await res.json();
+  } catch (err) {
+    return fallbackOverview.revenueTrend;
+  }
+}
+
+export async function getRevenueByRegion() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/metrics/revenue-by-region`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Bad response");
+    return await res.json();
+  } catch (err) {
+    return fallbackOverview.revenueByRegion;
+  }
+}
+
+export async function getCostBreakdown() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/metrics/cost-breakdown`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Bad response");
+    return await res.json();
+  } catch (err) {
+    return fallbackOverview.costBreakdown;
+  }
+}
+
+export async function getQuarterlyPerformance() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/metrics/quarterly-performance`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Bad response");
+    return await res.json();
+  } catch (err) {
+    return fallbackOverview.quarterlyPerformance;
+  }
+}
+
+export async function getTopProducts() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/metrics/top-products`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Bad response");
+    return await res.json();
+  } catch (err) {
+    return fallbackOverview.topProducts;
+  }
+}
+
+export async function getInsights() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/metrics/insights`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Bad response");
+    return await res.json();
+  } catch (err) {
+    return fallbackOverview.insights;
+  }
+}
 
 export async function askAssistant(question) {
   try {

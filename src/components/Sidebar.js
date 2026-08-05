@@ -1,29 +1,30 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   BarChart3,
-  MessageSquare,
-  Compass,
+  LineChart,
   Layers,
-  FileText,
-  Database,
-  ShieldCheck,
+  Compass,
+  Package,
   Settings,
   Moon,
 } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
-  { label: "overview", icon: BarChart3, active: true },
-  { label: "Analytics", icon: MessageSquare },
-  { label: "Revenue", icon: Layers },
-  { label: "Regions", icon: Compass },
-  { label: "Products", icon: MessageSquare },
-  { label: "settings", icon: Settings },
+  { label: "Overview", href: "/", icon: BarChart3 },
+  { label: "Analytics", href: "/analytics", icon: LineChart },
+  { label: "Revenue", href: "/revenue", icon: Layers },
+  { label: "Regions", href: "/regions", icon: Compass },
+  { label: "Products", href: "/products", icon: Package },
+  { label: "Settings", href: "/settings", icon: Settings },
 ];
 
 export default function Sidebar() {
   const [darkMode, setDarkMode] = useState(false);
+  const pathname = usePathname();
 
   return (
     <aside className="hidden lg:flex flex-col w-64 shrink-0 bg-slate-900 text-slate-200 min-h-screen">
@@ -36,18 +37,22 @@ export default function Sidebar() {
       </div>
 
       <nav className="flex-1 px-3 py-4 space-y-1">
-        {navItems.map(({ label, icon: Icon, active }) => (
-          <button
-            key={label}
-            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${active
-              ? "bg-brand-600 text-white"
-              : "text-slate-300 hover:bg-slate-800 hover:text-white"
-              }`}
-          >
-            <Icon className="w-4 h-4" />
-            {label}
-          </button>
-        ))}
+        {navItems.map(({ label, href, icon: Icon }) => {
+          const active = href === "/" ? pathname === "/" : pathname?.startsWith(href);
+          return (
+            <Link
+              key={label}
+              href={href}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${active
+                ? "bg-brand-600 text-white"
+                : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                }`}
+            >
+              <Icon className="w-4 h-4" />
+              {label}
+            </Link>
+          );
+        })}
       </nav>
 
       <div className="px-4 py-4 border-t border-slate-800 space-y-4">
