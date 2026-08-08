@@ -40,7 +40,7 @@ export default function Dashboard({ overview }) {
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
               <CostBreakdownChart data={costBreakdown} />
-              <QuarterlyPerformanceChart data={quarterlyPerformance} />
+              <QuarterlyPerformanceChart data={quarterlyPerformance} 
             </div>
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
